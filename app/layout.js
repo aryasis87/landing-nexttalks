@@ -4,10 +4,10 @@ import "./globals.css";
 const interTight = Inter_Tight({ variable: "--font-intertight", subsets: ["latin"], weight: ["600", "700", "900"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"NextTalks","description":"Platform webinar profesional","url":"https://landing-nexttalks.vercel.app","inLanguage":"id"};
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"NextTalks","description":"Platform webinar profesional","url":"https://nexttalks.pintuweb.com","inLanguage":"id"};
 
 export const metadata = {
-  metadataBase: new URL("https://landing-nexttalks.vercel.app"),
+  metadataBase: new URL("https://nexttalks.pintuweb.com"),
   title: "NextTalks — Ide Besar, Pembicara Inspiratif",
   description: "NextTalks: temukan ide-ide besar dan pembicara inspiratif dalam satu platform webinar profesional.",
   applicationName: "NextTalks",
@@ -15,11 +15,11 @@ export const metadata = {
   authors: [{ name: "NextTalks" }],
   creator: "NextTalks",
   publisher: "NextTalks",
-  alternates: { canonical: "https://landing-nexttalks.vercel.app" },
+  alternates: { canonical: "https://nexttalks.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://landing-nexttalks.vercel.app",
+    url: "https://nexttalks.pintuweb.com",
     siteName: "NextTalks",
     title: "NextTalks — Ide Besar, Pembicara Inspiratif",
     description: "NextTalks: temukan ide-ide besar dan pembicara inspiratif dalam satu platform webinar profesional.",
