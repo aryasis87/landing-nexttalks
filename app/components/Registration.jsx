@@ -253,7 +253,7 @@ const Registration = () => {
                   </div>
                   <div className="ml-3 text-sm">
                     <label htmlFor="terms" className="font-medium text-gray-700">
-                      Saya menyetujui <a href="#" className="text-blue-600 hover:text-blue-500">Syarat & Ketentuan</a> dan <a href="#" className="text-blue-600 hover:text-blue-500">Kebijakan Privasi</a>
+                      Saya menyetujui <a href="/terms" className="text-blue-600 hover:text-blue-500">Syarat & Ketentuan</a> dan <a href="/privacy" className="text-blue-600 hover:text-blue-500">Kebijakan Privasi</a>
                     </label>
                     {errors.terms && (
                       <p className="mt-1 text-sm text-red-600">{errors.terms.message}</p>

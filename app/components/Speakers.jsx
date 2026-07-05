@@ -133,7 +133,7 @@ const Speakers = () => {
                   
                   <div className="flex justify-center space-x-4">
                     {Object.keys(speaker.social).map((platform) => (
-                      <a key={platform} href="#" className="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                      <a key={platform} href="/" className="text-gray-500 hover:text-blue-600 transition-colors duration-300">
                         {/* Ikon sosial akan tetap sama */}
                       </a>
                     ))}
