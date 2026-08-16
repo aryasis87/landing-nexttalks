@@ -35,27 +35,32 @@ const About = () => {
   ];
 
   return (
-    <section className="py-12 px-4 md:px-6 lg:px-8 bg-white">
+    <section className="py-12 px-4 md:px-6 lg:px-8 bg-room">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Image */}
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-lg aspect-w-16 aspect-h-9">
-              <img 
-                src="images/webinar4.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                alt="Webinar Session" 
-                className="w-full h-64 md:h-86 lg:h-full object-cover"
-              />
+            {/* Foto stok sebelumnya tidak berkaitan dengan webinar, jadi
+                diganti panel takarir yang memakai motif varian ini. */}
+            <div className="rounded-2xl border border-wire bg-caption p-8 shadow-lg sm:p-10">
+              <p className="stamp mb-6 text-white/45">Cuplikan sesi lalu</p>
+              <p className="text-xl leading-relaxed font-bold text-white sm:text-2xl">
+                &ldquo;Studi kasus hanya berguna kalau angkanya ikut dibuka. Kalau tidak, itu cuma
+                cerita.&rdquo;
+              </p>
+              <p className="stamp mt-7 border-t border-white/15 pt-5 text-white/45">
+                Menit 18 · Sesi 11
+              </p>
             </div>
-            <div className="absolute -bottom-6 -right-2 md:-right-6 bg-blue-600 text-white p-4 md:p-6 rounded-xl shadow-xl w-3/4">
+            <div className="absolute -bottom-6 -right-2 md:-right-6 bg-live text-white p-4 md:p-6 rounded-xl shadow-xl w-3/4">
               <h3 className="font-bold text-base md:text-xl mb-2">100% Praktikal</h3>
-              <p className="text-blue-100 text-sm md:text-base">Studi kasus nyata dari pengalaman profesional</p>
+              <p className="text-room/80 text-sm md:text-base">Studi kasus nyata dari pengalaman profesional</p>
             </div>
           </motion.div>
 
@@ -67,13 +72,13 @@ const About = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block px-3 py-1 text-sm font-medium text-blue-700 bg-blue-100 rounded-full mb-4">
+              <span className="inline-block px-3 py-1 text-sm font-medium text-live bg-live/12 rounded-full mb-4">
                 Tentang Webinar
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Belajar Langsung dari <span className="text-blue-600">Para Praktisi</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-6">
+                Belajar Langsung dari <span className="text-live">Para Praktisi</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-ink-soft mb-6">
                 Webinar kami dirancang untuk memberikan Anda wawasan mendalam dan keterampilan praktis yang bisa langsung diaplikasikan.
               </p>
             </motion.div>
@@ -89,12 +94,12 @@ const About = () => {
                   viewport={{ once: true }}
                   className="flex items-start space-x-4"
                 >
-                  <div className="flex-shrink-0 bg-blue-100 p-3 rounded-lg text-blue-600">
+                  <div className="flex-shrink-0 bg-live/12 p-3 rounded-lg text-live">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-ink">{feature.title}</h3>
+                    <p className="text-ink-soft">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -123,20 +128,20 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-12 md:mt-20 bg-gray-50 rounded-2xl p-8 sm:p-10 shadow-inner"
+          className="mt-12 md:mt-20 bg-room-2 rounded-2xl p-8 sm:p-10 shadow-inner"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-200">
             <div className="text-center md:text-left">
-              <h3 className="text-4xl font-bold text-blue-600">5000+</h3>
-              <p className="text-gray-600 mt-2">Peserta Terdaftar</p>
+              <h3 className="text-4xl font-bold text-live">5000+</h3>
+              <p className="text-ink-soft mt-2">Peserta Terdaftar</p>
             </div>
             <div className="text-center md:text-left md:pl-8 pt-6 md:pt-0">
-              <h3 className="text-4xl font-bold text-blue-600">98%</h3>
-              <p className="text-gray-600 mt-2">Kepuasan Peserta</p>
+              <h3 className="text-4xl font-bold text-live">98%</h3>
+              <p className="text-ink-soft mt-2">Kepuasan Peserta</p>
             </div>
             <div className="text-center md:text-left md:pl-8 pt-6 md:pt-0">
-              <h3 className="text-4xl font-bold text-blue-600">50+</h3>
-              <p className="text-gray-600 mt-2">Perusahaan Mitra</p>
+              <h3 className="text-4xl font-bold text-live">50+</h3>
+              <p className="text-ink-soft mt-2">Perusahaan Mitra</p>
             </div>
           </div>
         </motion.div>

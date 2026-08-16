@@ -10,7 +10,7 @@ const Speakers = () => {
       name: "Dr. Sarah Wijaya",
       role: "Kepala Pemasaran Digital di TechCorp",
       bio: "Pakar dengan pengalaman 10+ tahun di bidang pemasaran digital dan growth hacking",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "/images/pp1.png",
       topics: ["SEO", "Pemasaran Konten", "Pemasaran Berbasis Data"],
       social: {
         linkedin: "#",
@@ -23,7 +23,7 @@ const Speakers = () => {
       name: "Michael Santoso",
       role: "Desainer Produk Utama di FinTech Inc",
       bio: "Mendesain produk digital yang digunakan oleh jutaan orang di Asia Tenggara",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "/images/pp2.png",
       topics: ["Riset UX", "Desain UI", "Sistem Desain"],
       social: {
         linkedin: "#",
@@ -35,7 +35,7 @@ const Speakers = () => {
       name: "Andi Pratama",
       role: "Ilmuwan Data di Startup AI",
       bio: "Spesialis machine learning dan analitik data untuk bisnis",
-      image: "https://randomuser.me/api/portraits/men/65.jpg",
+      image: "/images/pp3.png",
       topics: ["Analitik Prediktif", "Implementasi AI", "Visualisasi Data"],
       social: {
         linkedin: "#",
@@ -47,7 +47,7 @@ const Speakers = () => {
       name: "Lisa Setiawan",
       role: "VP Teknik di HealthTech",
       bio: "Memimpin tim teknik untuk solusi kesehatan digital",
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      image: "/images/pp4.png",
       topics: ["Kepemimpinan Teknologi", "Pengembangan Agile", "Arsitektur Sistem"],
       social: {
         linkedin: "#",
@@ -68,13 +68,13 @@ const Speakers = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-blue-600 bg-blue-100 rounded-full uppercase mb-4">
+          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-live bg-live/12 rounded-full uppercase mb-4">
             Pembicara Ahli
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Belajar dari <span className="text-blue-600">Para Pemimpin Industri</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-ink mb-6 leading-tight">
+            Belajar dari <span className="text-live">Para Pemimpin Industri</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-ink-soft max-w-3xl mx-auto leading-relaxed">
             Pembicara kami yang terpilih dengan cermat menghadirkan keahlian nyata dan wawasan yang dapat langsung diterapkan
           </p>
         </motion.div>
@@ -97,7 +97,7 @@ const Speakers = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg transform group-hover:scale-105 transition-all duration-500 -z-10"></div>
               
-              <div className="h-full bg-white rounded-xl shadow-sm overflow-hidden group-hover:shadow-md transition-all duration-500 flex flex-col">
+              <div className="h-full bg-room rounded-xl shadow-sm overflow-hidden group-hover:shadow-md transition-all duration-500 flex flex-col">
                 <div className="pt-10 px-6">
                   <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-6">
                     <img 
@@ -110,20 +110,20 @@ const Speakers = () => {
                   </div>
                   
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-1">{speaker.name}</h3>
-                    <p className="text-blue-600 font-medium mb-4">{speaker.role}</p>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-6">{speaker.bio}</p>
+                    <h3 className="text-2xl font-bold text-ink mb-1">{speaker.name}</h3>
+                    <p className="text-live font-medium mb-4">{speaker.role}</p>
+                    <p className="text-ink-soft text-sm leading-relaxed mb-6">{speaker.bio}</p>
                   </div>
                 </div>
                 
                 <div className="px-6 pb-6 mt-auto">
                   <div className="mb-6">
-                    <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Keahlian</h4>
+                    <h4 className="text-xs font-semibold text-ink-soft uppercase tracking-wider mb-3">Keahlian</h4>
                     <div className="flex flex-wrap justify-center gap-2">
                       {speaker.topics.map((topic, i) => (
                         <span 
                           key={i}
-                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-700"
+                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-room-2 text-live"
                         >
                           {topic}
                         </span>
@@ -133,7 +133,7 @@ const Speakers = () => {
                   
                   <div className="flex justify-center space-x-4">
                     {Object.keys(speaker.social).map((platform) => (
-                      <a key={platform} href="/" className="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                      <a key={platform} href="/" className="text-ink-soft hover:text-live transition-colors duration-300">
                         {/* Ikon sosial akan tetap sama */}
                       </a>
                     ))}
@@ -154,7 +154,7 @@ const Speakers = () => {
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-10 shadow-xl">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">Siap Meningkatkan Keahlian Anda?</h3>
-            <p className="text-blue-100 max-w-2xl mx-auto mb-8 text-lg">
+            <p className="text-room/80 max-w-2xl mx-auto mb-8 text-lg">
               Bergabunglah dalam webinar eksklusif kami dan dapatkan wawasan dari para profesional terbaik di industri
             </p>
             <Button 

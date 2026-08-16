@@ -38,7 +38,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-room-2">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div 
@@ -48,13 +48,13 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-blue-600 bg-blue-100 rounded-full uppercase mb-4">
+          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-live bg-live/12 rounded-full uppercase mb-4">
             Pertanyaan Umum
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            Pertanyaan yang <span className="text-blue-600">Sering Diajukan</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-ink mb-4 leading-tight">
+            Pertanyaan yang <span className="text-live">Sering Diajukan</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-ink-soft max-w-3xl mx-auto leading-relaxed">
             Temukan jawaban atas pertanyaan Anda tentang webinar ini
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ const FAQ = () => {
           {faqItems.map((item, index) => (
             <div 
               key={index}
-              className="mb-4 border border-gray-200 rounded-xl overflow-hidden bg-white"
+              className="mb-4 border border-wire rounded-xl overflow-hidden bg-room"
             >
               <button
                 onClick={() => toggleAccordion(index)}
@@ -72,11 +72,11 @@ const FAQ = () => {
                 aria-expanded={activeIndex === index}
                 aria-controls={`faq-panel-${index}`}
               >
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="text-lg font-semibold text-ink">
                   {item.question}
                 </h3>
                 <svg
-                  className={`w-5 h-5 text-blue-600 transform transition-transform duration-300 ${activeIndex === index ? 'rotate-180' : ''}`}
+                  className={`w-5 h-5 text-live transform transition-transform duration-300 ${activeIndex === index ? 'rotate-180' : ''}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ const FAQ = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 pt-2 text-gray-600">
+                    <div className="px-6 pb-6 pt-2 text-ink-soft">
                       {item.answer}
                     </div>
                   </motion.div>
@@ -115,21 +115,21 @@ const FAQ = () => {
         >
           <div className="bg-gradient-to-r from-blue-800 to-indigo-900 rounded-2xl p-10 shadow-xl">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">Masih ada pertanyaan?</h3>
-            <p className="text-blue-100 max-w-2xl mx-auto mb-8 text-lg">
+            <p className="text-room/80 max-w-2xl mx-auto mb-8 text-lg">
               Tim support kami siap membantu menjawab pertanyaan Anda
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 variant="white"
                 size="xl"
-                className="px-10 py-4 bg-white text-black font-bold shadow-lg hover:shadow-xl transition-all"
+                className="px-10 py-4 bg-room text-black font-bold shadow-lg hover:shadow-xl transition-all"
               >
                 Hubungi Kami
               </Button>
               <Button 
                 variant="outline-white"
                 size="xl"
-                className="px-10 py-4 font-bold border-2 hover:bg-white hover:bg-opacity-10 transition-colors"
+                className="px-10 py-4 font-bold border-2 hover:bg-room hover:bg-opacity-10 transition-colors"
               >
                 Lihat Panduan Peserta
               </Button>

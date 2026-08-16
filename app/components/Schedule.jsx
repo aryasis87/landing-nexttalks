@@ -63,14 +63,14 @@ const Schedule = () => {
 
   const getEventColor = (type) => {
     const colors = {
-      general: "bg-gray-100 text-gray-800",
-      keynote: "bg-blue-100 text-blue-800",
+      general: "bg-room-2 text-ink",
+      keynote: "bg-live/12 text-live",
       workshop: "bg-purple-100 text-purple-800",
       masterclass: "bg-green-100 text-green-800",
       panel: "bg-yellow-100 text-yellow-800",
       networking: "bg-pink-100 text-pink-800"
     };
-    return colors[type] || "bg-gray-100";
+    return colors[type] || "bg-room-2";
   };
 
   const getEventIcon = (type) => {
@@ -95,7 +95,7 @@ const Schedule = () => {
   };
 
   return (
-    <section className="py-12 lg:py-18 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-12 lg:py-18 px-4 sm:px-6 lg:px-8 bg-room">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div 
@@ -105,13 +105,13 @@ const Schedule = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-blue-600 bg-blue-100 rounded-full uppercase mb-4">
+          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-live bg-live/12 rounded-full uppercase mb-4">
             Agenda Kegiatan
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            Jadwal <span className="text-blue-600">Webinar</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-ink mb-4 leading-tight">
+            Jadwal <span className="text-live">Webinar</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-ink-soft max-w-3xl mx-auto leading-relaxed">
             Rangkaian acara yang dirancang untuk memberikan pengalaman belajar terbaik
           </p>
         </motion.div>
@@ -128,44 +128,44 @@ const Schedule = () => {
               className="mb-16"
             >
               <div className="flex items-center mb-8">
-                <div className="flex-shrink-0 bg-blue-600 rounded-lg p-3 shadow-lg">
+                <div className="flex-shrink-0 bg-live rounded-lg p-3 shadow-lg">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="ml-4 text-2xl font-bold text-gray-900">{day.date}</h3>
+                <h3 className="ml-4 text-2xl font-bold text-ink">{day.date}</h3>
               </div>
 
               <div className="space-y-6">
                 {day.events.map((event, eventIndex) => (
                   <motion.div
                     key={eventIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.1 + (eventIndex * 0.1) }}
                     viewport={{ once: true }}
                     className="relative pl-14"
                   >
-                    <div className="absolute left-0 top-0 h-full w-0.5 bg-gray-200">
+                    <div className="absolute left-0 top-0 h-full w-0.5 bg-wire">
                       <div className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full ${getEventColor(event.type).replace('bg-', 'bg-').replace('text-', 'bg-')}`}></div>
                     </div>
 
                     <div className={`p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 ${getEventColor(event.type)}`}>
                       <div className="flex items-start">
-                        <div className="flex-shrink-0 p-2 rounded-lg bg-white shadow-xs mr-4">
+                        <div className="flex-shrink-0 p-2 rounded-lg bg-room shadow-xs mr-4">
                           {getEventIcon(event.type)}
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center justify-between flex-wrap">
-                            <span className="text-sm font-medium text-gray-500">{event.time}</span>
+                            <span className="text-sm font-medium text-ink-soft">{event.time}</span>
                             <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getEventColor(event.type)}`}>
                               {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
                             </span>
                           </div>
-                          <h4 className="text-xl font-bold text-gray-900 mt-1 mb-2">{event.title}</h4>
-                          <p className="text-gray-600 mb-3">{event.description}</p>
-                          <p className="text-sm font-medium text-gray-700">
-                            Pembicara: <span className="text-blue-600">{event.speaker}</span>
+                          <h4 className="text-xl font-bold text-ink mt-1 mb-2">{event.title}</h4>
+                          <p className="text-ink-soft mb-3">{event.description}</p>
+                          <p className="text-sm font-medium text-ink-soft">
+                            Pembicara: <span className="text-live">{event.speaker}</span>
                           </p>
                         </div>
                       </div>
@@ -186,8 +186,8 @@ const Schedule = () => {
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-10 shadow-inner">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Tertarik Mengikuti Acara Kami?</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-8 text-lg">
+            <h3 className="text-2xl sm:text-3xl font-bold text-ink mb-6">Tertarik Mengikuti Acara Kami?</h3>
+            <p className="text-ink-soft max-w-2xl mx-auto mb-8 text-lg">
               Daftar sekarang untuk mengamankan tempat Anda dan dapatkan akses eksklusif ke semua sesi
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -201,7 +201,7 @@ const Schedule = () => {
               <Button 
                 variant="outline"
                 size="xl"
-                className="px-10 py-4 font-bold border-2 hover:bg-gray-50 transition-colors"
+                className="px-10 py-4 font-bold border-2 hover:bg-room-2 transition-colors"
               >
                 Download Agenda
               </Button>

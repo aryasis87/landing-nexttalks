@@ -15,7 +15,7 @@ const TargetAudience = () => {
         </svg>
       ),
       stats: "65% peserta sebelumnya",
-      color: "bg-blue-100 text-blue-800"
+      color: "bg-live/12 text-live"
     },
     {
       id: 2,
@@ -73,7 +73,7 @@ const TargetAudience = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-room-2">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div 
@@ -83,13 +83,13 @@ const TargetAudience = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-blue-600 bg-blue-100 rounded-full uppercase mb-4">
+          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-live bg-live/12 rounded-full uppercase mb-4">
             Untuk Siapa Webinar Ini?
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            Target <span className="text-blue-600">Audiens</span> Kami
+          <h2 className="text-4xl sm:text-5xl font-bold text-ink mb-4 leading-tight">
+            Target <span className="text-live">Audiens</span> Kami
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-ink-soft max-w-3xl mx-auto leading-relaxed">
             Webinar ini dirancang khusus untuk profesional yang ingin mengembangkan diri di era digital
           </p>
         </motion.div>
@@ -103,15 +103,15 @@ const TargetAudience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              className="bg-room rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
               <div className="p-6">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 ${group.color}`}>
                   {group.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{group.title}</h3>
-                <p className="text-gray-600 mb-4">{group.description}</p>
-                <span className="text-sm font-medium text-gray-500">{group.stats}</span>
+                <h3 className="text-xl font-bold text-ink mb-3">{group.title}</h3>
+                <p className="text-ink-soft mb-4">{group.description}</p>
+                <span className="text-sm font-medium text-ink-soft">{group.stats}</span>
               </div>
             </motion.div>
           ))}
@@ -125,17 +125,17 @@ const TargetAudience = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-10 shadow-xl">
+          <div className="bg-gradient-to-r from-live to-indigo-600 rounded-2xl p-10 shadow-xl">
             <h3 className="text-2xl font-bold text-white text-center mb-10">Apa Kata Mereka?</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="bg-blue-900 bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-xl p-6">
-                  <svg className="w-8 h-8 text-blue-200 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                <div key={testimonial.id} className="bg-ink bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-xl p-6">
+                  <svg className="w-8 h-8 text-room/70 mb-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <p className="text-blue-50 text-lg italic mb-6">"{testimonial.quote}"</p>
-                  <div className="text-blue-100">
+                  <p className="text-room/90 text-lg italic mb-6">"{testimonial.quote}"</p>
+                  <div className="text-room/80">
                     <p className="font-bold">{testimonial.name}</p>
                     <p className="text-sm">{testimonial.role}, {testimonial.company}</p>
                   </div>
@@ -153,9 +153,9 @@ const TargetAudience = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-white rounded-2xl p-10 shadow-lg border border-gray-100">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Apakah Anda Termasuk Target Audiens Kami?</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-8 text-lg">
+          <div className="bg-room rounded-2xl p-10 shadow-lg border border-wire">
+            <h3 className="text-2xl sm:text-3xl font-bold text-ink mb-6">Apakah Anda Termasuk Target Audiens Kami?</h3>
+            <p className="text-ink-soft max-w-2xl mx-auto mb-8 text-lg">
               Jika Anda ingin mengembangkan skill digital, webinar ini cocok untuk Anda!
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -169,7 +169,7 @@ const TargetAudience = () => {
               <Button 
                 variant="outline"
                 size="xl"
-                className="px-10 py-4 font-bold border-2 hover:bg-gray-50 transition-colors"
+                className="px-10 py-4 font-bold border-2 hover:bg-room-2 transition-colors"
               >
                 Lihat Kurikulum
               </Button>

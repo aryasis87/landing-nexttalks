@@ -10,10 +10,10 @@ const Button = ({
   const baseClasses = 'rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const variants = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500 shadow-md',
-    secondary: 'bg-gray-800 hover:bg-gray-900 text-white focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
-    ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
+    primary: 'bg-live hover:bg-live text-white focus:ring-blue-500 shadow-md',
+    secondary: 'bg-ink hover:bg-ink text-white focus:ring-gray-500',
+    outline: 'border-2 border-live text-live hover:bg-room-2 focus:ring-blue-500',
+    ghost: 'text-live hover:bg-room-2 focus:ring-blue-500',
     danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500',
   };
 

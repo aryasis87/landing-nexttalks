@@ -21,10 +21,10 @@ const Pricing = () => {
       popular: false,
       highlight: false,
       colorScheme: {
-        bg: "bg-blue-50",
-        text: "text-blue-600",
-        border: "border-blue-200",
-        button: "bg-blue-600 hover:bg-blue-700"
+        bg: "bg-room-2",
+        text: "text-live",
+        border: "border-wire",
+        button: "bg-live hover:bg-live"
       }
     },
     {
@@ -115,7 +115,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="relative py-12 px-4 md:px-6 lg:px-8 bg-white overflow-hidden">
+    <section className="relative py-12 px-4 md:px-6 lg:px-8 bg-room overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-full max-w-2xl h-64 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full opacity-20 blur-3xl"></div>
       
@@ -128,13 +128,13 @@ const Pricing = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-20"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-blue-600 bg-blue-100 rounded-full uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-live bg-live/12 rounded-full uppercase mb-6">
             Harga Fleksibel
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold text-ink mb-4 leading-tight">
             Pilih <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Paket Belajar</span> Anda
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-ink-soft max-w-3xl mx-auto leading-relaxed">
             Investasi dalam pengetahuan yang berkembang bersama karier Anda. Semua paket termasuk garansi kepuasan kami.
           </p>
         </motion.div>
@@ -166,8 +166,8 @@ const Pricing = () => {
                     {plan.name}
                   </h3>
                   <div className="flex items-end">
-                    <span className="text-3xl md:text-4xl font-bold text-gray-900">{plan.currency} {plan.price}</span>
-                    <span className="text-lg text-gray-500 ml-2">/ {plan.duration}</span>
+                    <span className="text-3xl md:text-4xl font-bold text-ink">{plan.currency} {plan.price}</span>
+                    <span className="text-lg text-ink-soft ml-2">/ {plan.duration}</span>
                   </div>
                 </div>
                 
@@ -177,7 +177,7 @@ const Pricing = () => {
                       <svg className={`flex-shrink-0 w-5 h-5 mr-3 mt-1 ${plan.colorScheme.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-ink-soft">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -185,7 +185,7 @@ const Pricing = () => {
                 <Button
                   variant={plan.highlight ? "primary" : "outline"}
                   size="lg"
-                  className={`w-full h-10 lg:h-12 ${plan.highlight ? plan.colorScheme.button : 'border-2 hover:bg-gray-50'}`}
+                  className={`w-full h-10 lg:h-12 ${plan.highlight ? plan.colorScheme.button : 'border-2 hover:bg-room-2'}`}
                 >
                   Dapatkan Paket {plan.name}
                 </Button>
@@ -206,8 +206,8 @@ const Pricing = () => {
             <div className="bg-black rounded-xl p-10">
               <div className="flex flex-col lg:flex-row items-center justify-between">
                 <div className="mb-8 lg:mb-0 lg:mr-8">
-                  <h3 className="text-2xl font-bold text-gray-100 mb-3">Butuh solusi khusus untuk tim Anda?</h3>
-                  <p className="text-gray-200 max-w-2xl">
+                  <h3 className="text-2xl font-bold text-room/85 mb-3">Butuh solusi khusus untuk tim Anda?</h3>
+                  <p className="text-room/75 max-w-2xl">
                     Kami menawarkan paket korporat khusus dengan diskon volume, dukungan khusus, dan konten yang disesuaikan untuk memenuhi tujuan pembelajaran organisasi Anda.
                   </p>
                 </div>
@@ -230,7 +230,7 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-12">Apa yang Termasuk dalam Semua Paket</h3>
+          <h3 className="text-2xl font-bold text-center text-ink mb-12">Apa yang Termasuk dalam Semua Paket</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
@@ -240,13 +240,13 @@ const Pricing = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-200 transition-all duration-300"
+                className="bg-room p-6 rounded-xl border border-wire hover:border-wire transition-all duration-300"
               >
-                <div className="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-5">
+                <div className="bg-live/12 text-live w-12 h-12 rounded-xl flex items-center justify-center mb-5">
                   {feature.icon}
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>
-                <p className="text-gray-600">{feature.description}</p>
+                <h4 className="text-lg font-bold text-ink mb-2">{feature.title}</h4>
+                <p className="text-ink-soft">{feature.description}</p>
               </motion.div>
             ))}
           </div>
