@@ -94,7 +94,7 @@ const Registration = () => {
           >
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
               <h2 className="text-2xl font-bold">Formulir Pendaftaran</h2>
-              <p className="text-room/80">Isi data diri Anda dengan lengkap</p>
+              <p className="text-room">Isi data diri Anda dengan lengkap</p>
             </div>
             
             <form onSubmit={handleSubmit(onSubmit)} className="p-6 sm:p-8">

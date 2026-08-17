@@ -73,7 +73,7 @@ export default function Hero() {
                   <dt className="sr-only">{k}</dt>
                   <dd>
                     <span className="block text-2xl font-bold text-ink">{n}</span>
-                    <span className="stamp mt-2.5 block text-ink-soft/60">{k}</span>
+                    <span className="stamp mt-2.5 block text-ink-soft">{k}</span>
                   </dd>
                 </div>
               ))}
@@ -91,19 +91,19 @@ export default function Hero() {
           >
             <figcaption className="mb-7 flex items-center justify-between border-b border-wire pb-4">
               <span className="stamp live-dot flex items-center text-live">Sesi 12 · Cuplikan</span>
-              <span className="stamp text-ink-soft/50">Transkrip</span>
+              <span className="stamp text-ink-soft">Transkrip</span>
             </figcaption>
 
             <ol className="transcript-rail space-y-6 pl-5">
               <li>
-                <span className="stamp text-ink-soft/55">00:23 · Penanya</span>
+                <span className="stamp text-ink-soft">00:23 · Penanya</span>
                 <p className="mt-2 leading-relaxed text-ink-soft italic">
                   — Kalau timnya kecil dan waktunya mepet, bagian mana yang paling aman untuk
                   dikorbankan?
                 </p>
               </li>
               <li>
-                <span className="stamp text-ink-soft/55">00:24 · Pembicara II</span>
+                <span className="stamp text-ink-soft">00:24 · Pembicara II</span>
                 <p className="mt-2 leading-relaxed text-ink">
                   Ruang lingkupnya, bukan kualitasnya. Mengurangi jumlah yang dikerjakan masih bisa
                   dijelaskan ke pengguna. Mengurangi mutu tidak.
@@ -116,7 +116,7 @@ export default function Hero() {
                 &ldquo;Pertanyaan yang bagus lebih berharga daripada jawaban yang panjang.&rdquo;
               </span>
             </p>
-            <p className="stamp mt-4 text-ink-soft/55">Menit 41 · Sesi 12</p>
+            <p className="stamp mt-4 text-ink-soft">Menit 41 · Sesi 12</p>
           </motion.figure>
         </div>
       </div>

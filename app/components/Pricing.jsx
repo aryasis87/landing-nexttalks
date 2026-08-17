@@ -206,8 +206,8 @@ const Pricing = () => {
             <div className="bg-black rounded-xl p-10">
               <div className="flex flex-col lg:flex-row items-center justify-between">
                 <div className="mb-8 lg:mb-0 lg:mr-8">
-                  <h3 className="text-2xl font-bold text-room/85 mb-3">Butuh solusi khusus untuk tim Anda?</h3>
-                  <p className="text-room/75 max-w-2xl">
+                  <h3 className="text-2xl font-bold text-room mb-3">Butuh solusi khusus untuk tim Anda?</h3>
+                  <p className="text-room max-w-2xl">
                     Kami menawarkan paket korporat khusus dengan diskon volume, dukungan khusus, dan konten yang disesuaikan untuk memenuhi tujuan pembelajaran organisasi Anda.
                   </p>
                 </div>

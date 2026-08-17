@@ -75,7 +75,7 @@ export default function Transcript() {
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 <span className="stamp text-live">{p.menit}</span>
                 <span className="text-sm font-bold text-ink">{p.pembicara}</span>
-                <span className="stamp text-ink-soft/50">{p.peran}</span>
+                <span className="stamp text-ink-soft">{p.peran}</span>
               </div>
 
               <p
@@ -105,7 +105,7 @@ export default function Transcript() {
           </a>
         </div>
 
-        <p className="stamp mt-8 leading-[1.7] text-ink-soft/45">
+        <p className="stamp mt-8 leading-[1.7] text-ink-soft">
           Potongan transkrip di atas adalah ilustrasi untuk keperluan purwarupa desain.
         </p>
       </div>

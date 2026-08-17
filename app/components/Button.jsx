@@ -15,6 +15,7 @@ const Button = ({
     outline: 'border-2 border-live text-live hover:bg-room-2 focus:ring-blue-500',
     ghost: 'text-live hover:bg-room-2 focus:ring-blue-500',
     danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500',
+    white: 'bg-room text-ink hover:bg-room-2 focus:ring-live shadow-md',
   };
 
   return (

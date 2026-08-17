@@ -115,7 +115,7 @@ const FAQ = () => {
         >
           <div className="bg-gradient-to-r from-blue-800 to-indigo-900 rounded-2xl p-10 shadow-xl">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">Masih ada pertanyaan?</h3>
-            <p className="text-room/80 max-w-2xl mx-auto mb-8 text-lg">
+            <p className="text-room max-w-2xl mx-auto mb-8 text-lg">
               Tim support kami siap membantu menjawab pertanyaan Anda
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

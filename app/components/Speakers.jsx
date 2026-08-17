@@ -154,7 +154,7 @@ const Speakers = () => {
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-10 shadow-xl">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">Siap Meningkatkan Keahlian Anda?</h3>
-            <p className="text-room/80 max-w-2xl mx-auto mb-8 text-lg">
+            <p className="text-room max-w-2xl mx-auto mb-8 text-lg">
               Bergabunglah dalam webinar eksklusif kami dan dapatkan wawasan dari para profesional terbaik di industri
             </p>
             <Button 

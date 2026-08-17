@@ -49,18 +49,18 @@ const About = () => {
             {/* Foto stok sebelumnya tidak berkaitan dengan webinar, jadi
                 diganti panel takarir yang memakai motif varian ini. */}
             <div className="rounded-2xl border border-wire bg-caption p-8 shadow-lg sm:p-10">
-              <p className="stamp mb-6 text-white/45">Cuplikan sesi lalu</p>
+              <p className="stamp mb-6 text-white">Cuplikan sesi lalu</p>
               <p className="text-xl leading-relaxed font-bold text-white sm:text-2xl">
                 &ldquo;Studi kasus hanya berguna kalau angkanya ikut dibuka. Kalau tidak, itu cuma
                 cerita.&rdquo;
               </p>
-              <p className="stamp mt-7 border-t border-white/15 pt-5 text-white/45">
+              <p className="stamp mt-7 border-t border-white/15 pt-5 text-white">
                 Menit 18 · Sesi 11
               </p>
             </div>
             <div className="absolute -bottom-6 -right-2 md:-right-6 bg-live text-white p-4 md:p-6 rounded-xl shadow-xl w-3/4">
               <h3 className="font-bold text-base md:text-xl mb-2">100% Praktikal</h3>
-              <p className="text-room/80 text-sm md:text-base">Studi kasus nyata dari pengalaman profesional</p>
+              <p className="text-room text-sm md:text-base">Studi kasus nyata dari pengalaman profesional</p>
             </div>
           </motion.div>
 
