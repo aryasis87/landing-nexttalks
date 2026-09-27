@@ -11,9 +11,8 @@ const Registration = () => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    console.log(data);
+    // Halaman contoh: data tidak dikirim ke mana pun (lihat pesan sukses).
+    await new Promise(resolve => setTimeout(resolve, 600));
     setIsSubmitting(false);
     setIsSuccess(true);
     reset();
@@ -63,9 +62,9 @@ const Registration = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-3xl font-bold text-ink mb-4">Pendaftaran Berhasil!</h2>
+            <h2 className="text-3xl font-bold text-ink mb-4">Terima kasih!</h2>
             <p className="text-ink-soft mb-8">
-              Terima kasih telah mendaftar webinar kami. Kami telah mengirimkan detail pembayaran dan instruksi lanjutan ke email Anda.
+              Ini halaman contoh, jadi pendaftaran tidak diproses dan tidak ada tagihan atau email yang dikirim.
             </p>
             <Button 
               variant="primary"
