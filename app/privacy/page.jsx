@@ -1,29 +1,21 @@
-import Link from 'next/link';
+import Legal from '../components/Legal';
+import { SITE } from '@/lib/sesi';
 
-export const metadata = { title: 'Kebijakan Privasi', description: 'Kebijakan privasi NextTalks.' };
+export const metadata = {
+  title: 'Kebijakan Privasi',
+  description: 'Data apa yang dikumpulkan NextTalks, bagaimana rekaman dan transkrip menyamarkan peserta, dan cara meminta data dihapus.',
+  alternates: { canonical: `${SITE}/privacy` },
+};
 
-const sections = [
-  { h: '1. Informasi yang Kami Kumpulkan', p: 'Kami mengumpulkan nama, email, dan data pendaftaran yang Anda berikan saat mendaftar webinar, serta data teknis dasar untuk meningkatkan layanan.' },
-  { h: '2. Penggunaan Informasi', p: 'Data digunakan untuk memproses pendaftaran, mengirim tautan & pengingat acara, serta informasi webinar yang relevan. Kami tidak menjual data Anda.' },
-  { h: '3. Cookie & Analitik', p: 'Kami menggunakan cookie untuk mengingat preferensi dan menganalisis lalu lintas. Anda dapat menonaktifkannya melalui browser.' },
-  { h: '4. Keamanan', p: 'Kami menerapkan langkah keamanan yang wajar untuk melindungi data Anda dari akses yang tidak sah.' },
-  { h: '5. Hak Anda', p: 'Anda dapat meminta akses, pembaruan, atau penghapusan data pribadi kapan saja dengan menghubungi kami.' },
+const PASAL = [
+  ['Yang kami kumpulkan', 'Nama, surel, paket yang Anda pilih, dan pertanyaan yang Anda tulis saat mendaftar. Kami tidak meminta nomor telepon, tanggal lahir, atau alamat.'],
+  ['Pertanyaan yang dibacakan', 'Saat pertanyaan Anda dibacakan di sesi, pemandu hanya menyebut kota Anda — tidak pernah nama. Di transkrip, penanya ditulis sebagai "Peserta, [kota]".'],
+  ['Rekaman dan transkrip', 'Rekaman hanya menangkap layar pembicara dan pemandu. Kamera dan suara peserta tidak ikut terekam kecuali Anda sendiri memilih bertanya secara lisan.'],
+  ['Untuk apa data dipakai', 'Mengirim tautan ruang bicara, transkrip, rekaman, dan sertifikat. Surel tentang sesi berikutnya hanya dikirim bila Anda mencentang pilihan itu.'],
+  ['Yang tidak kami lakukan', 'Kami tidak menjual, menyewakan, atau membagikan data Anda kepada pengiklan maupun pembicara.'],
+  ['Hak Anda', 'Anda bisa meminta salinan, perbaikan, atau penghapusan data kapan saja. Permintaan diproses paling lambat 14 hari kerja.'],
 ];
 
 export default function PrivacyPage() {
-  return (
-    <main className="mx-auto max-w-3xl px-6 py-20">
-      <Link href="/" className="text-sm font-semibold text-blue-600 hover:underline">← Kembali ke beranda</Link>
-      <h1 className="mt-6 text-4xl font-bold text-gray-900">Kebijakan Privasi</h1>
-      <p className="mt-3 text-gray-500">Terakhir diperbarui: 6 Juli 2026</p>
-      <div className="mt-10 space-y-8">
-        {sections.map((s) => (
-          <section key={s.h}>
-            <h2 className="text-xl font-semibold text-gray-900">{s.h}</h2>
-            <p className="mt-2 leading-relaxed text-gray-600">{s.p}</p>
-          </section>
-        ))}
-      </div>
-    </main>
-  );
+  return <Legal label="Kebijakan privasi" judul="Yang kami simpan, dan yang tidak" intro="NextTalks hanya menyimpan data yang dibutuhkan untuk mengirimkan sesi kepada Anda. Halaman ini menjelaskan apa saja itu." pasal={PASAL} />;
 }

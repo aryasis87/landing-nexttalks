@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { BERIKUT } from '@/lib/sesi';
 
 const angka = [
   ['1.000+', 'Penonton sesi sebelumnya'],
@@ -20,7 +21,7 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
               className="stamp live-dot mb-8 flex items-center text-live"
             >
-              NextTalks · Sesi berikutnya Kamis
+              Sesi {BERIKUT.nomor} · {BERIKUT.hari}
             </motion.p>
 
             <motion.h1

@@ -1,29 +1,21 @@
-import Link from 'next/link';
+import Legal from '../components/Legal';
+import { SITE } from '@/lib/sesi';
 
-export const metadata = { title: 'Syarat & Ketentuan', description: 'Syarat & ketentuan penggunaan NextTalks.' };
+export const metadata = {
+  title: 'Ketentuan',
+  description: 'Ketentuan mengikuti NextTalks: tiket, pembatalan, penggunaan transkrip, dan aturan di ruang bicara.',
+  alternates: { canonical: `${SITE}/terms` },
+};
 
-const sections = [
-  { h: '1. Penerimaan Ketentuan', p: 'Dengan mendaftar dan mengikuti webinar kami, Anda menyetujui Syarat & Ketentuan ini.' },
-  { h: '2. Pendaftaran & Kehadiran', p: 'Tautan webinar bersifat pribadi untuk Anda. Mohon tidak membagikannya kepada pihak lain tanpa izin.' },
-  { h: '3. Hak Kekayaan Intelektual', p: 'Seluruh materi webinar, rekaman, dan konten adalah milik pembicara dan NextTalks. Dilarang menyebarluaskan tanpa izin.' },
-  { h: '4. Pembatalan & Perubahan', p: 'Jadwal atau pembicara dapat berubah. Kami akan memberi tahu peserta terdaftar secepatnya jika terjadi perubahan.' },
-  { h: '5. Batasan Tanggung Jawab', p: 'Layanan disediakan "sebagaimana adanya". Kami tidak bertanggung jawab atas gangguan teknis di luar kendali kami.' },
+const PASAL = [
+  ['Tiket dan paket', 'Tiket satu sesi berlaku untuk sesi yang Anda pilih. Paket Musiman dan Tim berlaku dua belas sesi berturut-turut sejak tanggal pembelian.'],
+  ['Pembatalan', 'Uang kembali penuh bila Anda membatalkan paling lambat 48 jam sebelum sesi. Setelah itu tiket bisa dialihkan ke orang lain atau ke sesi berikutnya, satu kali.'],
+  ['Jika sesi dijadwal ulang', 'Bila sesi dipindah dari jadwalnya, Anda boleh memilih ikut di jadwal baru atau meminta uang kembali penuh.'],
+  ['Mengutip transkrip', 'Anda boleh mengutip transkrip untuk keperluan pribadi, kerja, atau pendidikan dengan menyebut nomor sesi dan menitnya. Menerbitkan ulang transkrip utuh memerlukan izin tertulis.'],
+  ['Di ruang bicara', 'Pertanyaan dibacakan sesuai urutan masuk. Pemandu boleh melewati pertanyaan yang menyerang pribadi, mengiklankan produk, atau berulang.'],
+  ['Sertifikat', 'Sertifikat kehadiran diberikan bila Anda hadir minimal 90 menit. Sertifikat ini tidak menyatakan pengakuan dari lembaga mana pun.'],
 ];
 
 export default function TermsPage() {
-  return (
-    <main className="mx-auto max-w-3xl px-6 py-20">
-      <Link href="/" className="text-sm font-semibold text-blue-600 hover:underline">← Kembali ke beranda</Link>
-      <h1 className="mt-6 text-4xl font-bold text-gray-900">Syarat &amp; Ketentuan</h1>
-      <p className="mt-3 text-gray-500">Terakhir diperbarui: 6 Juli 2026</p>
-      <div className="mt-10 space-y-8">
-        {sections.map((s) => (
-          <section key={s.h}>
-            <h2 className="text-xl font-semibold text-gray-900">{s.h}</h2>
-            <p className="mt-2 leading-relaxed text-gray-600">{s.p}</p>
-          </section>
-        ))}
-      </div>
-    </main>
-  );
+  return <Legal label="Ketentuan" judul="Aturan kecil supaya meja tetap nyaman" intro="Ketentuan ini berlaku untuk setiap tiket dan paket NextTalks." pasal={PASAL} />;
 }

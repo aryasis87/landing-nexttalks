@@ -1,31 +1,38 @@
 import Hero from "./components/Hero";
 import Transcript from "./components/Transcript";
-import About from "./components/About";
-import Speakers from "./components/Speakers";
-import Schedule from "./components/Schedule";
-import TargetAudience from "./components/TargetAudience";
-import Pricing from "./components/Pricing";
+import SesiBerikut from "./components/SesiBerikut";
+import Meja from "./components/Meja";
+import Untuk from "./components/Untuk";
+import Harga from "./components/Harga";
 import FAQ from "./components/FAQ";
 import Registration from "./components/Registration";
-import Sponsorship from "./components/Sponsorship";
-import Message from "./components/Message";
+import { BERIKUT, SITE } from "@/lib/sesi";
+
+const eventLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: `NextTalks Sesi ${BERIKUT.nomor}: ${BERIKUT.judul}`,
+  startDate: `${BERIKUT.iso}T19:00:00+07:00`,
+  endDate: `${BERIKUT.iso}T21:00:00+07:00`,
+  eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  location: { "@type": "VirtualLocation", url: SITE },
+  organizer: { "@type": "Organization", name: "NextTalks", url: SITE },
+  performer: BERIKUT.pembicara.map((p) => ({ "@type": "Person", name: p.nama })),
+};
 
 export default function Home() {
   return (
-    <>
-      <main>
-        <Message />
-        <Hero />
-        <Transcript />
-        <About />
-        <Speakers />
-        <Schedule />
-        <TargetAudience />
-        <Pricing />
-        <FAQ />
-        <Registration />
-        <Sponsorship />
-      </main>
-    </>
+    <main>
+      <Hero />
+      <Transcript />
+      <SesiBerikut />
+      <Meja />
+      <Untuk />
+      <Harga />
+      <FAQ />
+      <Registration />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventLd) }} />
+    </main>
   );
 }
